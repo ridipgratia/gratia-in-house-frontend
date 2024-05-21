@@ -1,0 +1,180 @@
+.updated-user-data-container{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.updated-top-component{
+     width: 100%;
+     height: 70px;
+}
+.updated-bottom-component{
+     width: 100%;
+    display: flex;
+    height:calc(100vh - 70px - 16px);
+    padding: 8px  0px;
+}
+.updated-left-sidebar{
+     height:calc(100vh - 70px - 16px);
+    flex: 2;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: 1px solid rgb(233, 231, 231);
+}
+.updated-right-content{
+    flex:10;
+     height:calc(100vh - 70px - 16px);
+     margin-left: 12px;
+     margin-right: 12px;
+}
+.update_user_profile_container{
+    width: 100%;
+    height: calc(100vh - 70px - 16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.user-edit-back-btn-div{
+    position: absolute;
+    left: 5px;
+    top:5px;
+}
+.user-edit-back-btn-div>span{
+    width: 50px;
+    height: 35px;
+  font-size: 19px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color:gray
+}
+.user-edit-back-btn-div>span:hover{
+   background-color: rgb(233, 228, 228);
+}
+.update_user_profile_main{
+    width: 100%;
+    height: calc(100vh - 70px - 16px);
+   padding: 40px;
+    border-radius: 5px;
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      border: 1px solid rgb(233, 231, 231);
+}
+.update_user_profile_data_div{
+    display:grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+}
+.update_user_profile_heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-family: "Poppins" sans-serif;
+     text-transform: uppercase;
+     font-size: 18px;
+     margin-bottom: 20px;
+     position: relative;
+}
+.update_user_profile_heading::after{
+    content: "";
+    width: 140px;
+    height: 2px;
+    bottom: 0px;
+    background-color: #4096ff;
+    position: absolute;
+
+}
+.update_user_image_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.update_user_data_input_div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+.update_user_data_input_div>label{
+    font-size: 15px;
+    font-family: "Poppins" sans-serif;
+    font-weight: 500;
+}
+.update_user_data_input_div>input{
+    height: 35px;
+    outline: none;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 5px;
+    padding-left: 8px;
+    cursor: pointer;
+}
+.update_user_data_input_div>input::placeholder{
+ font-family: "Poppins" sans-serif;
+ font-weight: 500;
+}
+.update_user_data_input_div>input[type="text"]{
+ font-family: "Poppins";
+ font-weight: 400;
+}
+.update_user_data_input_div>input:hover{
+    background-color: #fff;
+   border: 1px solid #4096ff;
+}
+.update_user_data_input_div>input:focus{
+    background-color: #fff;
+   border: 1px solid #4096ff;
+}
+.update_user_profile_btn_div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+}
+
+
+/* -------------------------------------media query--------------------------------- */
+@media screen and  (max-width:600px){
+    .updated-left-sidebar{
+        display: none;
+    }
+    .updated-bottom-component{
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .updated-right-content{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        overflow-y: scroll;
+        padding-bottom: 12px;
+    }
+    .update_user_profile_container{
+    height: auto;
+    overflow-y: hidden;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.update_user_profile_heading{
+    font-size: 20px;
+    margin-bottom: 28px;
+}
+ .update_user_profile_main{
+    width: 95%;
+    border: none;
+    padding: 15px 10px;
+    border: 1px solid rgb(233, 231, 231);
+ }
+ .update_user_data_input_div>input{
+    font-size: 16px;
+    height: 40px;
+ }
+ .update_user_profile_heading::after{
+    width: 155px;
+}
+.update_user_profile_data_div{
+    display:grid;
+    grid-template-columns: auto;
+    gap: 15px;
+}
+}
+

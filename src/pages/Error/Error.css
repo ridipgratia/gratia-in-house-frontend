@@ -1,0 +1,43 @@
+.error_container{
+     width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+.error_div{
+    display: flex; 
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+}
+.error_heading{
+    color: #6a5acd;
+    font-Size: 200px; 
+   font-family: "Mono";
+}
+.error_text{
+    color: #121212;
+}
+.error_back_btn{
+    margin-top: 15px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+.error_back_btn:hover{
+    background-color: lightgrey;
+}
+@media screen and (max-width:600px){
+    .error_heading{
+    color: #6a5acd;
+    font-Size: 30px; 
+   font-family: "Mono";
+}
+.error_text{
+    font-size: 14px;
+    color: #121212;
+}
+}
