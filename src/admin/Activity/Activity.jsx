@@ -73,8 +73,15 @@ const Activity = () => {
                 };
                 try {
                     const all_activity_data = await axiosInstance.post('/activity-on-date', req);
+                    // all_activity_data.data.date_wise_data.map((data, index) => (
+                    //     data[0].map((next_data_1, index_1) => (
+                    //         next_data_1.map((next_data_2, index_2) => (
+                    //             console.log(next_data_2.activity)
+                    //         ))
+                    //     ))
+                    // ))
                     if (all_activity_data.data.res_data.status == 200) {
-                        console.log(all_activity_data.data.date_wise_data[0][0][0][0].id);
+                        // console.log(all_activity_data.data.date_wise_data[0][0][0][0].date);
                         // console.log(all_activity_data.data.date_wise_data[0][1].first_name);
                         setGetAllUsersActivities(all_activity_data.data.date_wise_data);
                     } else {
@@ -335,13 +342,13 @@ const Activity = () => {
                                                     getAllUsersActivities.map((data, index) => (
                                                         data[0].map((next_data_1, index_1) => (
                                                             <div key={index_1} className='activity-report-list-data'>
-                                                                <span>{data[1].first_name}</span>
-                                                                <span>{data[1].designation}</span>
-                                                                <span>{next_data_1[index_1].date}</span>
+                                                                <span>{data[1]?.first_name}</span>
+                                                                <span>{data[1]?.designation}</span>
+                                                                <span>{next_data_1[0]?.date}</span>
                                                                 <div className='flex-div main-activity-div'>
                                                                     {
                                                                         next_data_1.map((next_data_2, index_2) => (
-                                                                            <p key={index_2}><span>{index_2 + 1}</span><span>{next_data_2.activity}</span></p>
+                                                                            <p key={index_2}><span>{index_2 + 1}</span><span>{next_data_2?.activity}</span></p>
                                                                         ))
                                                                     }
                                                                 </div>
